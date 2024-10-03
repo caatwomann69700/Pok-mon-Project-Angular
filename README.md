@@ -1,9 +1,16 @@
-# Pokemon
+# Pokemon Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Cette application a étè créer en [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
-## Development server
-
+## Création du projet avec la commande suivante : 
+```
+ng new pokemon --routing --style=scss
+```
+## Installation de tailwind en deux étapes avec les commandes suivantes : 
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
