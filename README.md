@@ -11,6 +11,21 @@ ng new pokemon --routing --style=scss
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
+## Configuration du tailwind dans le fichier tailwind.config.js comme ceci : 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+## Configuration du fichier styles.sccs comme ceci : 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
