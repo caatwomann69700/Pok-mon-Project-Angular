@@ -1,4 +1,4 @@
-# Pokemon Project
+# Pokemon Angular Project
 
 Cette application a étè créer en [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 
