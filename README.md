@@ -105,30 +105,29 @@ La commande ng g c (ou ng generate component) est utilisée pour générer un co
   <!-- <router-outlet> est une balise Angular qui sert de conteneur pour afficher dynamiquement les composants en fonction de la route (URL) active. Lorsque l'utilisateur navigue entre différentes pages, Angular injecte le composant correspondant à l'intérieur de <router-outlet>. Il est généralement placé dans app.component.html pour gérer la navigation entre les pages tout en maintenant des éléments fixes comme un header ou un footer. -->
 </html>
 ```
-  
 ### Petite explication : 
 Ces deux fichiers je les considére comme les composants parents principaux ou la base de l'application angular. 
  + Le fichier app.component.ts est la classe TypeScript du composant racine,Ce composant parent va généralement contenir l'ensemble des composants enfants.
  + Le fichier app.component.html est le template associé à app.component.ts, Le template contient l'interface utilisateur de base, comme le header, le footer, une navigation, et il intègre des composants enfants via leurs sélecteurs personnalisés donc Le fichier contient la structure générale.
-##
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Dans le fichier "app.routes.ts" j'ai importer les routes comme ceci : 
+```
+import { Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { authGuard } from './guards/auth/auth.guard';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+export const routes: Routes = [
+    {path: '',canActivate:[authGuard],component: HomeComponent}, 
 
-## Build
+    {path:'connexion',component:LoginComponent},
+    {path: '**', redirectTo:''}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+];
+```
+## Dans le fichier "app.component.html" j'ai mis le router dans une <div class= "container" , ce qui va me permettre d'avoir tout le 'contenu' de ma page dans un 'container' comme ceci : 
+``` html
+<div class=" container mx-auto h-full"> 
+<router-outlet></router-outlet>
+</div>
+```
