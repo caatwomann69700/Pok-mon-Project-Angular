@@ -12,6 +12,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 ## Configuration du tailwind dans le fichier tailwind.config.js comme ceci : 
+``` java script
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -22,11 +23,13 @@ module.exports = {
   },
   plugins: [],
 }
+```
 ## Configuration du fichier styles.sccs comme ceci : 
+``` java script
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+```
 ## Configuration du fichier tsconfig.json comme ceci : 
 ``` java script
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
@@ -59,8 +62,11 @@ module.exports = {
     "strictTemplates": true
   }
 }
-
-
+```
+## génerer un dossier avec component'auth' services/auth/auth avec la commande suivante : 
+```
+ng g s services/auth/auth
+```
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
