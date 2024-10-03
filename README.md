@@ -98,8 +98,8 @@ ng generate component ou ng g c
 ### Petite explication : 
 La commande ng g c (ou ng generate component) est utilisée pour générer un composant Angular. Un composant est une partie de l'interface utilisateur (UI) dans une application Angular. Chaque composant a une logique associée (un fichier TypeScript), un modèle (HTML), et des styles (CSS).
 ## Les fichiers " app.component.ts ", " app.component.html " :
-### 1 Dans le fichier " app.component.ts ", j'ai supprimer le 'title' 
-### 2 Dans le fichier " app.component.html ", j'ai supprimer tout le code qui a éte mis en place automatiquement par 'angular'
+#### 1 Dans le fichier " app.component.ts ", j'ai supprimer le 'title' 
+#### 2 Dans le fichier " app.component.html ", j'ai supprimer tout le code qui a éte mis en place automatiquement par 'angular'
 ### Petite explication : 
 Ces deux fichiers je les considére comme les composants parents principaux ou la base de l'application angular. 
  + Le fichier app.component.ts est la classe TypeScript du composant racine,Ce composant parent va généralement contenir l'ensemble des composants enfants.
