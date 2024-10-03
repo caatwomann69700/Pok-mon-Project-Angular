@@ -99,11 +99,17 @@ ng generate component ou ng g c
 La commande ng g c (ou ng generate component) est utilisée pour générer un composant Angular. Un composant est une partie de l'interface utilisateur (UI) dans une application Angular. Chaque composant a une logique associée (un fichier TypeScript), un modèle (HTML), et des styles (CSS).
 ## Les fichiers " app.component.ts ", " app.component.html " :
 #### 1 Dans le fichier " app.component.ts ", j'ai supprimer le 'title' 
-#### 2 Dans le fichier " app.component.html ", j'ai supprimer tout le code qui a éte mis en place automatiquement par 'angular'
+#### 2 Dans le fichier " app.component.html ", j'ai supprimer tout le code qui a éte mis en place automatiquement par 'angular' car je vais mettre mon propre code de base, j'ai importer ceci <router-outlet> </router-outlet>
+  ``` html
+  <router-outlet> </router-outlet>
+  <!-- <router-outlet> est une balise Angular qui sert de conteneur pour afficher dynamiquement les composants en fonction de la route (URL) active. Lorsque l'utilisateur navigue entre différentes pages, Angular injecte le composant correspondant à l'intérieur de <router-outlet>. Il est généralement placé dans app.component.html pour gérer la navigation entre les pages tout en maintenant des éléments fixes comme un header ou un footer. -->
+</html>
+```
+  
 ### Petite explication : 
 Ces deux fichiers je les considére comme les composants parents principaux ou la base de l'application angular. 
  + Le fichier app.component.ts est la classe TypeScript du composant racine,Ce composant parent va généralement contenir l'ensemble des composants enfants.
- + Le fichier app.component.html est le template associé à app.component.ts, Le template contient l'interface utilisateur de base, comme le header, le footer, une navigation, et il intègre des composants enfants via leurs sélecteurs personnalisés.
+ + Le fichier app.component.html est le template associé à app.component.ts, Le template contient l'interface utilisateur de base, comme le header, le footer, une navigation, et il intègre des composants enfants via leurs sélecteurs personnalisés donc Le fichier contient la structure générale.
 ##
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
