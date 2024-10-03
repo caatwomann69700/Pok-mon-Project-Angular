@@ -67,6 +67,38 @@ module.exports = {
 ```
 ng g s services/auth/auth
 ```
+### Important ! 
+A chaque fois qu'on veut génerer un nouveau service dans le dossier services on utilise la commande suivante : 
+```
+ng g s services/../..
+```
+### Petite explication : 
+Un service est une classe qui contient de la logique de traitement de données, des appels à des APIs, ou tout autre code qui n'est pas directement lié à l'interface utilisateur.
+
+## Création des composants avec les commandes suivantes : 
+```
+ng generate component ou ng g c
+```
++ /pages/login :
+  ```
+  ng g c pages/login
+  ```
++ /pages/home :
+  ```
+  ng g c pages/home
+  ```
++ /components/login-form
+  ```
+  ng g c /components/login-form
+  ```
++ /components/pokemon-card
+  ```
+  ng g c /components/pokemon-card
+  ```
+### Petite explication : 
+La commande ng g c (ou ng generate component) est utilisée pour générer un composant Angular. Un composant est une partie de l'interface utilisateur (UI) dans une application Angular. Chaque composant a une logique associée (un fichier TypeScript), un modèle (HTML), et des styles (CSS).
+
+  
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
