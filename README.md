@@ -105,6 +105,8 @@ La commande ng g c (ou ng generate component) est utilisée pour générer un co
   <!-- <router-outlet> est une balise Angular qui sert de conteneur pour afficher dynamiquement les composants en fonction de la route (URL) active. Lorsque l'utilisateur navigue entre différentes pages, Angular injecte le composant correspondant à l'intérieur de <router-outlet>. Il est généralement placé dans app.component.html pour gérer la navigation entre les pages tout en maintenant des éléments fixes comme un header ou un footer. -->
 </html>
 ```
+## Explication du <router-outlet> </router-outlet> 
+Elle agit comme une fenêtre d'affichage dans la mise en page de l'application où les composants routés sont rendus de manière dynamique. Cela permet aux applications Angular d'avoir plusieurs vues ou pages sans avoir besoin de recharger des pages entières.
 ### Petite explication : 
 Ces deux fichiers je les considére comme les composants parents principaux ou la base de l'application angular. 
  + Le fichier app.component.ts est la classe TypeScript du composant racine,Ce composant parent va généralement contenir l'ensemble des composants enfants.
@@ -131,3 +133,5 @@ export const routes: Routes = [
 <router-outlet></router-outlet>
 </div>
 ```
+
+
